@@ -12,7 +12,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Assignment_CSharp_Demo\Assignment_CSharp_Demo_API.csproj" />
-    <ProjectReference Include="..\Data\Data.csproj" />
   </ItemGroup>
 
 </Project>

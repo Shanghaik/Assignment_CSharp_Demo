@@ -19,7 +19,7 @@ namespace Data.DbContexts
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            base.OnConfiguring(optionsBuilder.UseSqlServer("..."));
+            base.OnConfiguring(optionsBuilder.UseSqlServer(@"Server=SHANGHAIK\SQLEXPRESS;Initial Catalog=CS5_DemoDB;Persist Security Info=True;User ID=shanghaik;Password=123456"));
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

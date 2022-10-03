@@ -1,11 +1,12 @@
-﻿using Data.DbContexts;
+﻿using Assignment_CSharp_Demo_API.IServices;
+using Data.DbContexts;
 using Data.ModelsClass;
 using Data.Repositories.Interfaces;
 using MessagePack.Formatters;
 
 namespace Assignment_CSharp_Demo_API.Sevices
 {
-    public class SanphamsService
+    public class SanphamsService : ISanphamsServices
     {
         private readonly CuahangDbContext context;
         private readonly IRepositories<Sanpham> repositories;
