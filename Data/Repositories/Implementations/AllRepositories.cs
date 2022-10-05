@@ -16,10 +16,12 @@ namespace Data.Repositories.Implementations
     {
         private readonly CuahangDbContext _dbContext;
         DbSet<TEntity> Entities { get ; set ; }
-        DbSet<TEntity> IRepositories<TEntity>.Entities { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public AllRepositories()
+        DbSet<TEntity> IRepositories<TEntity>.Entities { get ; set ; }
+        
+        public AllRepositories(CuahangDbContext cuahangDbContext)
         {
-
+            this._dbContext = cuahangDbContext;
+            this.Entities = Entities;
         }
         public async Task<TEntity> AddOneAsyn(TEntity entity)
         {

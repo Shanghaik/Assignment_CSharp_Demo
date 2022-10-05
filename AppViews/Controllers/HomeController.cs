@@ -1,4 +1,5 @@
 ﻿using AppViews.Models;
+
 using Data.ModelsClass;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
@@ -9,10 +10,11 @@ namespace AppViews.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
-
-        public HomeController(ILogger<HomeController> logger)
+       // private readonly AppViews.Se
+       
+        public HomeController()
         {
-            _logger = logger;
+           // sanphamsServices = sanphamsServices;
         }
 
         public async Task<IActionResult> Index()

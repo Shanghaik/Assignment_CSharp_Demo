@@ -8,13 +8,10 @@ namespace Assignment_CSharp_Demo_API.Sevices
 {
     public class SanphamsService : ISanphamsServices
     {
-        private readonly CuahangDbContext context;
         private readonly IRepositories<Sanpham> repositories;
-        public SanphamsService(IRepositories<Sanpham> repositories,
-            CuahangDbContext context)
+        public SanphamsService(IRepositories<Sanpham> repositories)
         {
             this.repositories = repositories;
-            this.context = context; 
         }
 
         public Task<IEnumerable<Sanpham>> GetAllSanPham() // Lấy tất
@@ -91,21 +88,7 @@ namespace Assignment_CSharp_Demo_API.Sevices
             }
         }
 
-        public bool UpdateTrangthaiSanpham(Guid id)
-        {
-            try
-            {
-                var sanpham = context.Sanphams.Find(id);
-                sanpham.Trangthai = !sanpham.Trangthai; // Đổi trạng thái
-                context.SaveChanges();
-                return true;
-            }
-            catch (Exception)
-            {
-                return false;
-            }
-           
-        }
+        
 
         public bool DeleteSanpham(Guid id)
         {  

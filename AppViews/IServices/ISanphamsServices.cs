@@ -21,7 +21,6 @@ namespace Assignment_CSharp_Demo_API.IServices
         public bool UpdateSanpham(Sanpham sanpham);
         public bool UpdateManySanpham(IEnumerable<Sanpham> sanphams);
 
-        public bool UpdateTrangthaiSanpham(Guid id);
 
         public bool DeleteSanpham(Guid id);
         public bool DeleteNhieuSanpham(IEnumerable<Sanpham> sanphams);
